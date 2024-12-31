@@ -19,6 +19,14 @@ try:
     findMca.click()
 
     time.sleep(5)
-    
+
+    actualTitle = driver.title
+
+    if actualTitle == "Computer Applications | FISAT | Federal Institute of Science And Technology":
+        print("PASS")
+    else:
+        print(actualTitle)
+        print("FAIL")
+
 finally:
     driver.quit()
